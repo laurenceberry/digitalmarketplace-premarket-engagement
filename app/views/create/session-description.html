@@ -26,20 +26,12 @@
 
       <form class="form" action="/create/session-details">
 
-        <fieldset class="form-group">
-          <legend class="visuallyhidden">Title</legend>
-          <div class="form">
-
-            <div class="form-title">
-              <input class="form-control" id="title" name="title">
-            </div>
-
-          </div>
-        </fieldset>
-
-        <div class="form-group">
-          <input class="button" type="submit" value="Save and continue">
+        <div class="question" id="session-description">
+          <label for="session-description" class="visually-hidden">session-description</label>
+          <textarea type="textarea" name="session-description" id="session-description" class="text-box  text-box-large">{{data["session-description"]}}</textarea>
         </div>
+
+        <input class="button" type="submit" value="Save and continue">
 
       </form>
     </div>

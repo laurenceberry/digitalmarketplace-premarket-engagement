@@ -24,20 +24,15 @@
 
       <form class="form" action="/create/overview">
 
-        <div class="question" id="question-10">
-          <label for="title" class="visually-hidden">
-            title
-          </label>
-          
-            <input type="text" name="title" id="title" class="text-box" value="{{data["title"]}}"
-            />
+        <div class="question" id="title">
+          <label for="title" class="visually-hidden">title</label>
+          <input type="text" name="title" id="title" class="text-box" value="{{data["title"]}}"/>
         </div>
 
-        <div class="form-group">
-          <input class="button" type="submit" value="Save and continue">
-        </div>
+        <input class="button" type="submit" value="Save and continue">
 
       </form>
+
     </div>
   </div>
 </main>

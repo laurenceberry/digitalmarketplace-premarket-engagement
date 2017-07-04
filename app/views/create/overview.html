@@ -34,20 +34,30 @@
               <a class="task-name" href="title" aria-describedby="eligibility-incomplete">
                 Title
               </a>
-              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+
+              {% if data["title"] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}
+
             </li>
             <li class="task-list-item">
               <a class="task-name" href="description-of-work" aria-describedby="eligibility-incomplete">
                 Description of work
               </a>
-              <!-- <strong class="task-completed" id="eligibility-completed">Completed</strong> -->
+              
+              {% if data["work-location"] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}
+              
+              
             </li>
             <li class="task-list-item">
               <a class="task-name" href="session-details" aria-describedby="eligibility-incomplete">
-                Session details
+                Description of session
               </a>
-              <!-- <strong class="task-completed" id="eligibility-completed">Completed</strong> -->
-            </li>
+              {% if data["session-time"] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}            </li>
           </ul>
         </li>
 
@@ -56,7 +66,7 @@
       <ol class="task-list">
         <li>
           <h2 class="task-list-section">
-            <span class="task-list-section-number">2. </span> Publish and invite
+            <span class="task-list-section-number">2. </span> Publish
           </h2>
 
           <ul class="task-list-items">
@@ -82,13 +92,13 @@
       <ol class="task-list">
         <li>
           <h2 class="task-list-section">
-            <span class="task-list-section-number">3. </span> Publish
+            <span class="task-list-section-number">3. </span> Invite suppliers
           </h2>
 
           <ul class="task-list-items">
             <li class="task-list-item">
               <a class="task-name" href="preview" aria-describedby="eligibility-incomplete">
-                Preview and publish
+                Shortlist and invite
               </a>
               <!-- <strong class="task-completed" id="eligibility-completed">Completed</strong> -->
             </li>

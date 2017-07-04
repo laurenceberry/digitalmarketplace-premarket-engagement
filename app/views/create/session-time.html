@@ -26,20 +26,12 @@
 
       <form class="form" action="/create/session-details">
 
-        <fieldset class="form-group">
-          <legend class="visuallyhidden">Title</legend>
-          <div class="form">
-
-            <div class="form-title">
-              <input class="form-control" id="title" name="title">
-            </div>
-
-          </div>
-        </fieldset>
-
-        <div class="form-group">
-          <input class="button" type="submit" value="Save and continue">
+        <div class="question" id="session-time">
+          <label for="session-time" class="visually-hidden">session-time</label>
+          <input type="text" name="session-time" id="session-time" class="text-box" value="{{data["session-time"]}}">
         </div>
+
+        <input class="button" type="submit" value="Save and continue">
 
       </form>
     </div>

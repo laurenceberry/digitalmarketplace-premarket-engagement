@@ -26,22 +26,15 @@
 
       <form class="form" action="/create/description-of-work">
 
-        <fieldset class="form-group">
-          <legend class="visuallyhidden">Title</legend>
-          <div class="form">
-
-            <div class="form-title">
-              <input class="form-control" id="title" name="title">
-            </div>
-
-          </div>
-        </fieldset>
-
-        <div class="form-group">
-          <input class="button" type="submit" value="Save and continue">
+        <div class="question" id="work-location">
+          <label for="work-location" class="visually-hidden">work-location</label>
+          <textarea type="textarea" name="work-location" id="work-location" class="text-box  text-box-large">{{data["work-location"]}}</textarea>
         </div>
 
+        <input class="button" type="submit" value="Save and continue">
+
       </form>
+
     </div>
   </div>
 </main>

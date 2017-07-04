@@ -24,11 +24,50 @@
         Session details
       </h1>
 
-      <ul>
-        <li><a href="session-description">Description</a></li>
-        <li><a href="session-location">Location</a></li>
-        <li><a href="session-time">Time and date</a></li>
-      </ul>
+    </div>
+    <div class="column-one-whole">
+
+      <table class="summary-item-body">
+        <caption class="visually-hidden">
+          Summary table with manual rows
+        </caption>
+        <thead class="summary-item-field-headings">
+          <tr>
+            <th scope="col" class="summary-item-field-heading-first">
+              <span class="visually-hidden">Label</span> 
+            </th>
+            <th scope="col" class="summary-item-field-heading">
+              <span class="visually-hidden">Value</span>    
+            </th>
+          </tr>
+        </thead>
+        <tbody>  
+          <tr class="summary-item-row">
+            <td  class="summary-item-field-first">
+              <a href="session-description">Description</a>
+            </td>
+            <td  class="summary-item-field">
+              {{data["session-description"]}}
+            </td>
+          </tr>
+          <tr class="summary-item-row">
+            <td  class="summary-item-field-first">
+              <a href="session-location">Location</a>
+            </td>
+            <td  class="summary-item-field">
+              {{data["session-location"]}}
+            </td>
+          </tr>
+          <tr class="summary-item-row">
+            <td  class="summary-item-field-first">
+              <a href="session-time">Time and date</a>
+            </td>
+            <td  class="summary-item-field">
+              {{data["session-time"]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <br>
       

@@ -45,11 +45,31 @@
         <tbody>  
           <tr class="summary-item-row">
             <td  class="summary-item-field-first">
+              <a href="work-organisation">Organisation</a>
+            </td>
+            <td  class="summary-item-field">
+              {{data["work-organisation"]}}
+            </td>
+          </tr>
+          <tr class="summary-item-row">
+            <td  class="summary-item-field-first">
               <a href="work-description">Description</a>
             </td>
             <td  class="summary-item-field">
               {{data["work-description"]}}
             </td>
+          </tr>
+          <tr class="summary-item-row">
+            <td  class="summary-item-field-first">
+              <a href="work-start">When the work will start</a>
+            </td>
+            {% if data["work-start"] %}
+              <td  class="summary-item-field">
+                {{data["work-start"]}}
+              </td>
+            {% else %}
+              <td class="summary-item-field-with-action"><span class="hint">Optional</span></td>
+            {% endif %}
           </tr>
           <tr class="summary-item-row">
             <td  class="summary-item-field-first">

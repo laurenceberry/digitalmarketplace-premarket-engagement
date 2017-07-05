@@ -13,27 +13,29 @@
     <ol>
       <li><a href="/index">Digital Marketplace</a></li>
       <li><a href="/create/overview">{{data["title"]}}</a></li>
-      <li><a href="/create/session-details">Session details</a></li>
+      <li><a href="/create/description-of-work">Description of work</a></li>
     </ol>
   </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Where will the session take place?
+      <h1 class="heading-large">
+        When will the work start? (optional)
       </h1>
 
-      <form class="form" action="/create/session-details">
 
-        <div class="question" id="session-location">
-          <label for="session-location" class="visually-hidden">session-location</label>
-          <textarea type="textarea" name="session-location" id="session-location" class="text-box  text-box-large">{{data["session-location"]}}</textarea>
+      <form class="form" action="/create/description-of-work">
+
+        <div class="question" id="work-start">
+          <label for="work-start" class="visually-hidden">Start date</label>
+          <input type="text" name="work-start" id="work-start" class="text-box" value="{{data["work-start"]}}"/>
         </div>
 
         <input class="button" type="submit" value="Save and continue">
 
       </form>
+
     </div>
   </div>
 </main>

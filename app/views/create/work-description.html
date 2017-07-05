@@ -20,14 +20,28 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Description
+      <h1 class="heading-large">
+        Add a description of your project
       </h1>
 
       <form class="form" action="/create/description-of-work">
 
         <div class="question" id="work-description">
-          <label for="work-description" class="visually-hidden">work-description</label>
+          <!-- <p for="work-description" class="">Give a description of your project</p> -->
+
+          <p>
+            Information you could give includes:
+            <ul class="list-bullet">
+              <li>background to your organisation and project</li>
+              <li>what you want to achieve</li>
+              <li>the phases you want them to give feedback on</li>
+              <li>the information you want suppliers to provide<br><span style="margin-top: -5px" class="hint">For example, how much the work might cost, how many people it may involve and how long it might take</span></li>
+            </ul>
+          </p>
+          <p class="">If you are not sure yet of the details or scope of the project, you can keep this brief.</p>
+          <br>
+          <label for="work-description" class="visually-hidden">Give a description of your project</label>
+
           <textarea type="textarea" name="work-description" id="work-description" class="text-box  text-box-large">{{data["work-description"]}}</textarea>
         </div>
 

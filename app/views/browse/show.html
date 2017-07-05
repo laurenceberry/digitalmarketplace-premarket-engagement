@@ -7,23 +7,192 @@
 
 {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <main id="content" role="main">
+    <div class='grid-row'>
+      <div class='column-two-thirds padding-bottom'>
+        <header class="page-heading-smaller">
 
-      <h1 class="heading-xlarge">
-        {{data["title"]}}
-      </h1>
+          <p class="context">
+            {{data["organisation"]}}
+          </p>
+          <h1 class="">
+            {{data["title"]}}
+          </h1>
 
-      <form class="form" action="/index">
-        <div class="form-group">
-          <br>
-          <input class="button" type="submit" value="Apply">
-        </div>
+        </header>
+      </div>
 
-      </form>
+      <div class="column-one-whole">
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            Important dates
+          </caption>
+
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Published</span>
+              </td>
+              <td class="summary-item-field">
+                <span>Tuesday 7 March</span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Deadline for application</span>
+              </td>
+              <td class="summary-item-field">
+                <span>Tuesday 14 March</span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Session date</span>
+              </td>
+              <td class="summary-item-field">
+                <span id="">Tuesday 21 March</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="summary-item-heading" id="opportunity-attributes-1">
+          About the work
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            Overview
+          </caption>
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Summary of the work</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{opportunities[opportunity].summaryOfWork}}
+                </span>
+              </td>
+            </tr>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Region</span>
+              </td>
+              <td class="summary-item-field">
+                <span>{{opportunities[opportunity].region}}</span>
+              </td>
+            </tr>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Organisation the work is for</span>
+              </td>
+              <td class="summary-item-field">
+                <span>{{opportunities[opportunity].department}}</span>
+              </td>
+            </tr>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Budget range</span>
+              </td>
+              <td class="summary-item-field">
+                {{opportunities[opportunity].budgetRange}}
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <h2 class="summary-item-heading" id="opportunity-attributes-2">
+          About the session
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            About the session
+          </caption>
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Location</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{opportunities[opportunity].problemToBeSolved}}
+                </span>
+              </td>
+            </tr>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Time</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{opportunities[opportunity].problemToBeSolved}}
+                </span>
+              </td>
+            </tr>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Date</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{opportunities[opportunity].problemToBeSolved}}
+                </span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+    <div class="grid-row">
+
+      <div class="padding-top column-two-thirds normal-paragraph padding-bottom-small">
+        <h2>Apply for this opportunity</h2>
+        <p class='padding-bottom-small'>
+          To apply, you must give evidence for all the essential and nice-to-have skills and experience you have.
+        </p>
+      </div>
     </div>
-  </div>
+    <div class="grid-row">
+      <div class="column-one-third">
+        <a class="link-button no-margin-top" href="../../structure/application-start/dos-opportunities?opportunity={{opportunities[opportunity].id|int - 1 }}">Apply</a>
+      </div>
+    </div>
 </main>
 
 {% endblock %}

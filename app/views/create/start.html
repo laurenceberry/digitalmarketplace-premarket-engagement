@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        
+        <header class="page-heading-smaller">
+          <h1>
+            Early market engagement
+          </h1>
+        </header>
+        
+
+        <h2 class="heading-medium">Talk to suppliers before you buy</h2>
+
+        <p>If you’re planning to buy services for digital projects, you can choose to talk to suppliers before you start the buying process. Early market engagement helps you:</p>
+        <ul class="list-bullet">
+	        <li>understand your requirements better</li>
+					<li>write clearer requirements to publish to suppliers</li>
+					<li>understand how much the work could cost</li>
+					<li>understand how long the work could take</li>
+					<li>write a better business case for spending controls or internal approval</li>
+        </ul>
+        <br>
+        <p>If you choose to do early market engagement, you must do it before you publish your requirements on the Digital Marketplace.</p>
+
+        
+        <form action="/create/title">
+          <input type="hidden" name="lot" value="outcomes"> 
+          <input type="submit" class="button-save" value="Start">
+        </form>
+        
+    </div>
+  </div>
+</main>
+
+{% endblock %}

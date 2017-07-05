@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/index">Digital Marketplace</a></li>
+      <li><a href="/create/overview">{{data["title"]}}</a></li>
+      <li><a href="/create/session-details">Session details</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        What type of event will you host?
+      </h1>
+
+      <form class="form" action="/create/session-details">
+
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="session-type" value="Online">
+          <label for="radio-1">Online webinar or presentation</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-1" type="radio" name="session-type" value="Event">
+          <label for="radio-1">Event presentation or workshop</label>
+        </div>
+        <div class="column-one-whole" style="margin-left: -10px">
+        <br>
+        <input class="button" type="submit" value="Save and continue">
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

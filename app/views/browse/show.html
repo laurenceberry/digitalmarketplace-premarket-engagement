@@ -10,10 +10,10 @@
   <main id="content" role="main">
     <div class='grid-row'>
       <div class='column-two-thirds padding-bottom'>
-        <header class="page-heading-smaller">
+        <header class="page-heading">
 
           <p class="context">
-            {{data["organisation"]}}
+            {{data["work-organisation"]}}
           </p>
           <h1 class="">
             {{data["title"]}}
@@ -49,18 +49,10 @@
             </tr>
             <tr class="summary-item-row">
               <td class="summary-item-field-first">
-                <span>Deadline for application</span>
+                <span>Deadline for expressing interest</span>
               </td>
               <td class="summary-item-field">
                 <span>Tuesday 14 March</span>
-              </td>
-            </tr>
-            <tr class="summary-item-row">
-              <td class="summary-item-field-first">
-                <span>Session date</span>
-              </td>
-              <td class="summary-item-field">
-                <span id="">Tuesday 21 March</span>
               </td>
             </tr>
           </tbody>
@@ -83,41 +75,47 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="summary-item-row">
-              <td class="summary-item-field-first">
-                <span>Summary of the work</span>
-              </td>
-              <td class="summary-item-field">
-                <span>
-                  {{opportunities[opportunity].summaryOfWork}}
-                </span>
-              </td>
-            </tr>
-
-            <tr class="summary-item-row">
-              <td class="summary-item-field-first">
-                <span>Region</span>
-              </td>
-              <td class="summary-item-field">
-                <span>{{opportunities[opportunity].region}}</span>
-              </td>
-            </tr>
 
             <tr class="summary-item-row">
               <td class="summary-item-field-first">
                 <span>Organisation the work is for</span>
               </td>
               <td class="summary-item-field">
-                <span>{{opportunities[opportunity].department}}</span>
+                <span>
+                  {{data["work-organisation"]}}
+                </span>
+              </td>
+            </tr>
+            
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Category</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{data["work-category"]}}
+                </span>
               </td>
             </tr>
 
             <tr class="summary-item-row">
               <td class="summary-item-field-first">
-                <span>Budget range</span>
+                <span>Description of work</span>
               </td>
               <td class="summary-item-field">
-                {{opportunities[opportunity].budgetRange}}
+                <span>
+                  {{data["work-description"]}}
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Location the work will take place in</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{data["work-location"]}}
+                </span>
               </td>
             </tr>
 
@@ -142,35 +140,46 @@
             </tr>
           </thead>
           <tbody>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Session type</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{data["session-type"]}}
+                </span>
+              </td>
+            </tr>
+
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Details</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  {{data["session-description"]}}
+                </span>
+              </td>
+            </tr>
             <tr class="summary-item-row">
               <td class="summary-item-field-first">
                 <span>Location</span>
               </td>
               <td class="summary-item-field">
                 <span>
-                  {{opportunities[opportunity].problemToBeSolved}}
+                  {{data["work-location"]}}
                 </span>
               </td>
             </tr>
 
             <tr class="summary-item-row">
               <td class="summary-item-field-first">
-                <span>Time</span>
+                <span>Date and time</span>
               </td>
               <td class="summary-item-field">
                 <span>
-                  {{opportunities[opportunity].problemToBeSolved}}
-                </span>
-              </td>
-            </tr>
-
-            <tr class="summary-item-row">
-              <td class="summary-item-field-first">
-                <span>Date</span>
-              </td>
-              <td class="summary-item-field">
-                <span>
-                  {{opportunities[opportunity].problemToBeSolved}}
+                  {{data["session-time"]}}
                 </span>
               </td>
             </tr>
@@ -180,17 +189,14 @@
 
 
     <div class="grid-row">
-
-      <div class="padding-top column-two-thirds normal-paragraph padding-bottom-small">
-        <h2>Apply for this opportunity</h2>
-        <p class='padding-bottom-small'>
-          To apply, you must give evidence for all the essential and nice-to-have skills and experience you have.
-        </p>
-      </div>
-    </div>
-    <div class="grid-row">
       <div class="column-one-third">
-        <a class="link-button no-margin-top" href="../../structure/application-start/dos-opportunities?opportunity={{opportunities[opportunity].id|int - 1 }}">Apply</a>
+        <form class="form" action="/index">
+          <div class="form-group">
+            <br>
+            <input class="button" type="submit" value="Publish">
+          </div>
+
+        </form>
       </div>
     </div>
 </main>
